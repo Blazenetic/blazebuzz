@@ -60,7 +60,8 @@ sudo pacman -S --needed patchelf xdotool
 
 ## Run it (local community)
 
-Full step-by-step: **[docs/blazenetic/RUNBOOK.md](docs/blazenetic/RUNBOOK.md)**.
+**Your checklist:** [docs/blazenetic/NEXT-STEPS.md](docs/blazenetic/NEXT-STEPS.md)  
+**Full ops detail:** [docs/blazenetic/RUNBOOK.md](docs/blazenetic/RUNBOOK.md).
 
 ```bash
 cd /mnt/FastSSD/main/code/active/blazebuzz

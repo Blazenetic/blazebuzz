@@ -5,6 +5,7 @@ Fork-layer documentation for [Blazenetic/blazebuzz](https://github.com/Blazeneti
 | Doc | Purpose |
 |-----|---------|
 | [../BLAZEBUZZ.md](../../BLAZEBUZZ.md) | Fork entry point (start here) |
+| [NEXT-STEPS.md](NEXT-STEPS.md) | Operator checklist — what to do next |
 | [RUNBOOK.md](RUNBOOK.md) | Run, customize, troubleshoot day-to-day |
 | [AGENTS.md](AGENTS.md) | Rules for AI agents on this fork |
 | [SYNC.md](SYNC.md) | Upstream sync runbook |
