@@ -112,4 +112,5 @@ just bb-smoke       # after relay is up
 just bb-push
 ```
 
-Operator runbook: [RUNBOOK.md](RUNBOOK.md).
+Operator runbook: [RUNBOOK.md](RUNBOOK.md).  
+Mobile QR pairing on self-host: [MOBILE-PAIRING.md](MOBILE-PAIRING.md).

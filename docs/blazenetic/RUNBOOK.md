@@ -154,6 +154,7 @@ See [deploy/compose/README.md](../../deploy/compose/README.md). Dev compose
 | Hermit tools missing | `. ./bin/activate-hermit` every new shell |
 | Dirty tree blocks sync | Commit/stash, or `just bb-sync --stash` |
 | Pre-push slow | Expected — runs rust + desktop unit tests |
+| Phone QR pairing: “Could not reach the pairing relay” | Community is almost certainly `ws://localhost:3000` — phone cannot reach your PC’s localhost. Use a public/mesh `wss://` URL. See [MOBILE-PAIRING.md](MOBILE-PAIRING.md) |
 
 ---
 

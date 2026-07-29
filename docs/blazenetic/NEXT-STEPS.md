@@ -156,6 +156,7 @@ Stay small so upstream merges stay easy.
 
 - [ ] Production-ish always-on host via `deploy/compose/`  
 - [ ] NetBird/Tailscale-only access instead of LAN ports  
+- [ ] Phone pairing: public/mesh `wss://` (store Android rejects `localhost` + private IPs) — [MOBILE-PAIRING.md](MOBILE-PAIRING.md)  
 - [ ] Upstream PR for a fix you want in `block/buzz`  
 - [ ] UI rebrand “Blazebuzz” product surface (careful merge strategy)  
 
