@@ -58,15 +58,33 @@ sudo pacman -S --needed patchelf xdotool
 
 ---
 
+## Run it (local community)
+
+Full step-by-step: **[docs/blazenetic/RUNBOOK.md](docs/blazenetic/RUNBOOK.md)**.
+
+```bash
+cd /mnt/FastSSD/main/code/active/blazebuzz
+. ./bin/activate-hermit
+just bb-up              # Postgres, Redis, migrations
+just relay              # ws://localhost:3000  (keep this terminal open)
+# other terminal:
+just desktop-dev        # web UI only
+# or: just dev          # Tauri desktop + relay together
+just bb-smoke           # health + readiness once relay is up
+```
+
+---
+
 ## Daily workflow
 
 ```bash
 cd /mnt/FastSSD/main/code/active/blazebuzz
 . ./bin/activate-hermit
 just bb-sync-status     # how far behind upstream?
+just bb-up              # services
 # …edit…
 just test-unit          # minimum gate
-# just relay            # when you want the local relay (ws://localhost:3000)
+just bb-push            # update GitHub fork
 ```
 
 ### Fork sync (Blazenetic tooling)
@@ -74,6 +92,8 @@ just test-unit          # minimum gate
 | Command | Purpose |
 |---------|---------|
 | `just bb-doctor` | Preflight (tools, remotes, podman, protected paths) |
+| `just bb-up` | Start/wait for Postgres + Redis + migrations |
+| `just bb-smoke` | Curl relay health/readiness |
 | `just bb-sync-status` | Ahead/behind origin + upstream |
 | `just bb-sync-dry` | Preview upstream commits without merging |
 | `just bb-sync` | Merge `upstream/main` into `main` (safe default) |
@@ -83,24 +103,29 @@ just test-unit          # minimum gate
 
 ---
 
-## What we intentionally defer
+## Customize
 
-- Full product boot (`just dev`) and production self-host (`deploy/compose`)  
-- Flutter/mobile toolchain  
-- UI rebrand Buzz → Blazebuzz  
+See [RUNBOOK.md § Customize](docs/blazenetic/RUNBOOK.md#customize-without-merge-hell).
 
-When ready to self-host for real, use [`deploy/compose/`](deploy/compose/README.md).
+Short version: put Blazenetic-only work under `docs/blazenetic/` and
+`scripts/blazenetic/`; put product features in normal Buzz paths so they can
+be upstreamed. Do **not** mass-rename crates to `blazebuzz`.
+
+Later durable host: [`deploy/compose/`](deploy/compose/README.md).
 
 ---
 
-## Handoff for the next agent
+## Handoff
 
 ```bash
 cd /mnt/FastSSD/main/code/active/blazebuzz
 . ./bin/activate-hermit
 just bb-sync-status
 just bb-doctor
-# weekly: just bb-sync && just bb-agent-ready
+just bb-up
+# run: just relay   OR   just dev
+just bb-smoke
+# weekly: just bb-sync && just bb-agent-ready && just bb-push
 ```
 
 Protected paths (never casually overwrite; sync tooling preserves them):

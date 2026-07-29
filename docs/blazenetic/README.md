@@ -5,6 +5,7 @@ Fork-layer documentation for [Blazenetic/blazebuzz](https://github.com/Blazeneti
 | Doc | Purpose |
 |-----|---------|
 | [../BLAZEBUZZ.md](../../BLAZEBUZZ.md) | Fork entry point (start here) |
+| [RUNBOOK.md](RUNBOOK.md) | Run, customize, troubleshoot day-to-day |
 | [AGENTS.md](AGENTS.md) | Rules for AI agents on this fork |
 | [SYNC.md](SYNC.md) | Upstream sync runbook |
 | [CACHYOS.md](CACHYOS.md) | FOXTROT / CachyOS / Podman notes |

@@ -101,11 +101,15 @@ If a change is Blazenetic-only (sync tooling, host docs), keep it in the protect
 ```bash
 . ./bin/activate-hermit
 just bb-doctor
+just bb-up
 just bb-sync-status
 just bb-sync-dry
 just bb-sync
 just test-unit
 just bb-agent-ready
-just relay          # optional: local relay
+just relay          # local relay ws://localhost:3000
+just bb-smoke       # after relay is up
 just bb-push
 ```
+
+Operator runbook: [RUNBOOK.md](RUNBOOK.md).

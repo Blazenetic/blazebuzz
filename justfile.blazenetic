@@ -12,6 +12,21 @@ bb-doctor:
     fi
     exec bash scripts/blazenetic/doctor.sh
 
+# Ensure Docker/Podman dev services are up (idempotent)
+bb-up:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [[ -f bin/activate-hermit ]]; then
+        # shellcheck disable=SC1091
+        source ./bin/activate-hermit
+    fi
+    just _ensure-migrations
+    echo "bb-up: postgres/redis ready (and migrations applied)"
+
+# Smoke-check a running relay (or fail with hints)
+bb-smoke:
+    bash scripts/blazenetic/smoke-relay.sh
+
 # Show ahead/behind vs origin + upstream
 bb-sync-status:
     bash scripts/blazenetic/sync-status.sh
