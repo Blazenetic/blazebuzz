@@ -134,6 +134,18 @@ just bb-sync-dry        # preview without merging
 
 ---
 
+## 5b. Phase 1 collaboration loop (Complex State)
+
+Human↔agent delivery loop for real project work — **read these next**:
+
+- [ARCHITECTURE_HANDOVER.md](ARCHITECTURE_HANDOVER.md) — systems of record, channels, roles, authority  
+- [PHASE1_COLLABORATION_LOOP.md](PHASE1_COLLABORATION_LOOP.md) — end-to-end runbook + verification checklist  
+- [CAPABILITY_MATRIX.md](CAPABILITY_MATRIX.md) — primary/fallback harnesses  
+
+Issues are disabled on the public fork; track work items via draft PRs + Blazebuzz work rooms (`#work-blazebuzz-<objective>`).
+
+---
+
 ## 6. First customizations (pick 1–2)
 
 Stay small so upstream merges stay easy.
@@ -144,6 +156,8 @@ Stay small so upstream merges stay easy.
 - [ ] Desktop/web branding strings or logo assets only (no crate renames)  
 - [ ] A small `buzz-cli` script or shell alias for your common ops  
 - [ ] Document *your* preferred start commands in a personal note (or extend this file)  
+- [x] Phase 1 collaboration-loop operator docs under `docs/blazenetic/` (see §5b)  
+
 
 ### Medium
 
