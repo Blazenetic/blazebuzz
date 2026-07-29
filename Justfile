@@ -926,3 +926,7 @@ benchmark *ARGS:
 # Stop the benchmark Docker stack (state and channels are kept)
 benchmark-down:
     docker compose --project-name buzz-benchmark down
+
+# ─── Blazenetic / Blazebuzz fork layer ────────────────────────────────────────
+# Optional import — missing file is a no-op so vanilla clones keep working.
+import? 'justfile.blazenetic'

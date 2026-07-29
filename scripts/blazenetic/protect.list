@@ -1,0 +1,7 @@
+# Paths owned by the Blazenetic fork layer.
+# Sync tooling prefers "ours" for these on conflict and re-applies them after
+# upstream merges when needed. One path per line; directories end with /.
+BLAZEBUZZ.md
+justfile.blazenetic
+docs/blazenetic/
+scripts/blazenetic/

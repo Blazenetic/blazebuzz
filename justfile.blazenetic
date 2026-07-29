@@ -1,0 +1,55 @@
+# Blazenetic / Blazebuzz recipes (fork layer).
+# Imported from the root Justfile via: import? 'justfile.blazenetic'
+# All recipes are namespaced bb-* so they never collide with upstream.
+
+# Preflight: tools, remotes, podman, protected layer
+bb-doctor:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [[ -f bin/activate-hermit ]]; then
+        # shellcheck disable=SC1091
+        source ./bin/activate-hermit >/dev/null 2>&1 || true
+    fi
+    exec bash scripts/blazenetic/doctor.sh
+
+# Show ahead/behind vs origin + upstream
+bb-sync-status:
+    bash scripts/blazenetic/sync-status.sh
+
+# Preview commits from upstream/main without merging
+bb-sync-dry:
+    bash scripts/blazenetic/sync-upstream.sh --dry-run
+
+# Merge upstream/main into main (safe default)
+bb-sync *ARGS:
+    bash scripts/blazenetic/sync-upstream.sh {{ARGS}}
+
+# Rebase onto upstream/main (rewrites history — use deliberately)
+bb-sync-rebase *ARGS:
+    bash scripts/blazenetic/sync-upstream.sh --rebase {{ARGS}}
+
+# Push current branch to origin (never upstream)
+bb-push:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    branch="$(git symbolic-ref --short HEAD)"
+    origin_url="$(git remote get-url origin)"
+    if [[ "$origin_url" != *"Blazenetic/blazebuzz"* ]]; then
+        echo "error: origin is not Blazenetic/blazebuzz ($origin_url)" >&2
+        exit 1
+    fi
+    echo "Pushing $branch → origin"
+    git push -u origin "$branch"
+
+# Agent gate: doctor + unit tests (no desktop/mobile)
+bb-agent-ready:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    if [[ -f bin/activate-hermit ]]; then
+        # shellcheck disable=SC1091
+        source ./bin/activate-hermit
+    fi
+    bash scripts/blazenetic/doctor.sh
+    just test-unit
+    echo
+    echo "bb-agent-ready: OK — environment is fit for agent work"

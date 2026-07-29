@@ -1,5 +1,9 @@
 # AGENTS.md — AI Agent Contributor Guide
 
+> **Blazenetic fork (Blazebuzz):** read [BLAZEBUZZ.md](BLAZEBUZZ.md) and
+> [docs/blazenetic/AGENTS.md](docs/blazenetic/AGENTS.md) first for remotes,
+> sync tooling (`just bb-*`), and host notes. Upstream Buzz agent guide continues below.
+
 This guide is for AI agents contributing to the Buzz codebase. It covers
 agent-specific context and conventions. For general contributor info (setup,
 code style, PR process, architecture), see [CONTRIBUTING.md](CONTRIBUTING.md).
