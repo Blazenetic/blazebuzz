@@ -10,6 +10,8 @@ The authoritative research, decisions and agent work packages live in the **rest
 - [06 — START HERE — Buzz Preparation & Agent Handoff](https://docs.google.com/document/d/1g6-tkv_kJAU3bT5Bo4_BJbdVWFeRMV4j9XWZAcd2WI8/edit)
 - [05 — Recommendation and Decision Register](https://docs.google.com/document/d/1dc1OCX7uTXz2OMQFS_9OOU6SidBT_SUWwXQb2appofI/edit)
 
+- [11 — Complex State Context & Knowledge Source Map](https://docs.google.com/document/d/1QQsdrUDgY5p6TZcKDsV1PVhq4TbRyEnuv7Rpmsp23VI/edit) — restricted company orientation, source precedence, private vault map and agent reading order.
+
 These links may require separately granted access. **This repository is public:** do not copy restricted Drive contents, credentials, business evidence, private contacts or internal operational records into GitHub. If Drive is unavailable, request access; do not infer decisions from stale fork notes.
 
 ## Intent and boundaries
@@ -34,12 +36,13 @@ The full scope, acceptance criteria and delegation sequence are in the Drive han
 
 ## Agent instructions
 
-1. Read [BLAZEBUZZ.md](../../BLAZEBUZZ.md), [fork agent rules](AGENTS.md) and the Google Drive master handoff before work.
-2. Distinguish upstream implementation, fork changes, research findings and untested proposals. Pin source revisions and cite evidence.
-3. Keep fork-only documentation in `docs/blazenetic/`; avoid changes to upstream Buzz code, workflows or deployment files unless separately authorised.
-4. Work in documentation only when assigned a preparation package. Do **not** deploy, run a pilot, connect real accounts, request credentials, purchase services, modify infrastructure or integrate production systems.
-5. Save detailed deliverables and decisions in the restricted Drive folder. This public repo should retain only a minimal orientation and links. Never mark untested behaviour as verified.
-6. Stop for founder approval before any implementation or rollout.
+1. Read the restricted **Complex State Context & Knowledge Source Map** before interpreting historical vault material. Vault OS is a framework, not the business source of truth; imported notes are historical, not current decisions.
+2. Read [BLAZEBUZZ.md](../../BLAZEBUZZ.md), [fork agent rules](AGENTS.md) and the Google Drive master handoff before work.
+3. Distinguish upstream implementation, fork changes, research findings and untested proposals. Pin source revisions and cite evidence.
+4. Keep fork-only documentation in `docs/blazenetic/`; avoid changes to upstream Buzz code, workflows or deployment files unless separately authorised.
+5. Work in documentation only when assigned a preparation package. Do **not** deploy, run a pilot, connect real accounts, request credentials, purchase services, modify infrastructure or integrate production systems.
+6. Save detailed deliverables and decisions in the restricted Drive folder. This public repo should retain only a minimal orientation and links. Never mark untested behaviour as verified.
+7. Stop for founder approval before any implementation or rollout.
 
 ## Upstream relationship
 
