@@ -13,6 +13,12 @@ This is a **fork identity**, not a tree-wide product rename. Upstream Buzz code,
 
 ---
 
+## Complex City planning (current direction)
+
+Buzz is the **preferred, not yet adopted** internal staff-and-agent chat platform for Complex City. The canonical decisions, preparation work packages and agent instructions live in the restricted Google Drive workspace. **Read [Complex City preparation handoff](docs/blazenetic/COMPLEX-CITY-HANDOFF.md) before any Complex City-related work.** No pilot, deployment or production integration is authorised by this documentation.
+
+---
+
 ## Read first (agents)
 
 1. **This file** — fork layout and daily commands  
@@ -21,6 +27,7 @@ This is a **fork identity**, not a tree-wide product rename. Upstream Buzz code,
 4. **[CONTRIBUTING.md](CONTRIBUTING.md)** — setup, style, PR process  
 5. **[docs/blazenetic/SYNC.md](docs/blazenetic/SYNC.md)** — keeping the fork current  
 6. **[docs/blazenetic/CACHYOS.md](docs/blazenetic/CACHYOS.md)** — host-specific notes  
+7. **[docs/blazenetic/COMPLEX-CITY-HANDOFF.md](docs/blazenetic/COMPLEX-CITY-HANDOFF.md)** — current Complex City scope, Drive links and preparation work packages  
 
 ---
 
