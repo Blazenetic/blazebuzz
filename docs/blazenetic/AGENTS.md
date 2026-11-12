@@ -2,6 +2,8 @@
 
 Read this **before** making changes on the Blazenetic fork. For Buzz internals (crates, kinds, desktop patterns), follow the root [AGENTS.md](../../AGENTS.md) and [CONTRIBUTING.md](../../CONTRIBUTING.md).
 
+For **Complex City-related tasks**, also read [COMPLEX-CITY-HANDOFF.md](COMPLEX-CITY-HANDOFF.md) and its canonical Google Drive references before making proposals. The current authorisation is documentation/readiness only; do not treat this fork's existing local run commands as approval to deploy, pilot or connect real company data.
+
 ---
 
 ## Identity
